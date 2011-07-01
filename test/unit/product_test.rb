@@ -66,7 +66,15 @@ class ProductTest < ActiveSupport::TestCase
 
     assert !product.save
     assert_equal "has already been taken", product.errors[:title].join('; ')
-    #assert_equal I18n.translate('activerecord.errors.massages.taken', product.errors[:title].join('; ')
+    #assert_equal I18n.translate('activerecord.errors.massages.taken'), product.errors[:title].join('; ')
+  end
+
+  test "product title must be at least 10 characters long" do
+    product = products(:ruby)
+    assert product.valid?, "product title shouldn't be invalid"
+
+    product.title = product.title.first(9)
+    assert product.invalid?, "product title shouldn't be valid"
   end
 end
 

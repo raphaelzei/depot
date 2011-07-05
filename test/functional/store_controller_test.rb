@@ -10,5 +10,14 @@ class StoreControllerTest < ActionController::TestCase
     assert_select '.price', /\$[,\d]+\.\d\d/
   end
 
+  test "should has at the least 3 itens on the main page" do
+    get :index
+    assert_select '#main' do |elements|
+      elements.each do |element|
+        assert_select element, '.entry', 3
+      end
+    end
+  end
+
 end
 

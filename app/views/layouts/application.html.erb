@@ -17,9 +17,12 @@
       <a href="http://www....">Home</a><br />
       <a href="http://www..../faq">Questions</a><br />
       <a href="http://www..../news">News</a><br />
-      <a href="http://www..../contact">Contact</a><br />
-      <div id="date">
-        <p><%= StoreHelper.GetTime %></p>
+      <a href="http://www..../contact">Contact</a><br /><br />
+      <div id="access_control">
+        <% if @count != nil && @count > 4 %>
+          <p> You've accessed <%= pluralize( @count, 'time' ) %> this page.</p>
+        <% end %>
+        <p> The Session was started: <%= StoreHelper.GetTime %></p>
       </div>
     </div>
     <div id="main">

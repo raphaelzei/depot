@@ -42,12 +42,12 @@ class LineItemsController < ApplicationController
   def create
     @cart = current_cart
     product = Product.find(params[:product_id])
-    @line_item = @cart.line_items.build(:product => product)
+    @line_item = @cart.add_product(product.id, product.price)
 
     respond_to do |format|
       if @line_item.save
         reset_session_counter
-        format.html { redirect_to(@line_item.cart, :notice => 'Line item was successfully created.') }
+        format.html { redirect_to(@line_item.cart) }
         format.xml  { render :xml => @line_item, :status => :created, :location => @line_item }
       else
         format.html { render :action => "new" }
@@ -79,7 +79,11 @@ class LineItemsController < ApplicationController
     @line_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to(line_items_url) }
+      if current_cart.line_items.empty?
+        format.html { redirect_to(store_url, :notice=> 'Your cart is empty') }
+      else
+        format.html { redirect_to(current_cart, :notice=> 'Item Removed') }
+      end
       format.xml  { head :ok }
     end
   end

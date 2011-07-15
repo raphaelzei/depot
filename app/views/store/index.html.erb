@@ -10,15 +10,24 @@
     <!-- <%= link_to(image_tag(product.image_url),
                      line_items_path(:product_id => product),
                      html_options = {:method => :post}) %> -->
-    <%= link_to(image_tag(product.image_url),
-                line_items_path(:product_id => product),
-                :method => :post) %>
+    <!-- <%= link_to(image_tag(product.image_url),
+            line_items_path(:product_id => product),
+            :method => :post) %> -->
+
+    <%= form_tag line_items_path(:product_id => product), :remote => true do %>
+    <%= image_submit_tag product.image_url,
+                         :alt => product.title,
+                         :title => "Add to cart",
+                         :class => "product_picture"  %>
+    <% end %>
+
     <h3> <%= product.title %></h3>
     <% sanitize(product.description) %>
     <div class="price_line">
       <!-- <span class="price"><%= number_to_currency(product.price, :unit => "R$", :format => "%u %n") %></span>-->
       <span class="price"><%= number_to_currency(product.price) %></span>
-      <%= button_to 'Add to Cart', line_items_path(:product_id => product) %>
+      <%= button_to 'Add to Cart', line_items_path(:product_id => product),
+          :remote => true %>
     </div>
   </div>
 <% end %>

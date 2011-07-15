@@ -31,6 +31,11 @@ class ProductTest < ActiveSupport::TestCase
 
     product.price = 1
     assert product.invalid?
+
+    product.price = 2000
+    assert product.invalid?
+    assert_equal "must be less than or equal to 1000",
+      product.errors[:price].join('; ')
   end
 
   def new_product(image_url)

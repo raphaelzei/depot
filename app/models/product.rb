@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
   validates :title, :description, :image_url, :presence => true
 
   validates :price,
-            :numericality => {:greater_than => 2, :less_than_or_equal_to => 1000}
+            :numericality => {:greater_than_or_equal_to => 0.01, :less_than_or_equal_to => 1000}
 
   validates :title,
             :uniqueness => true

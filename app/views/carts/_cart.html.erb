@@ -1,4 +1,3 @@
-<!-- <% unless cart.line_items.empty? %> -->
 <div class="cart_title">Your Cart </div>
 <table>
   <%= render(cart.line_items)%>
@@ -9,7 +8,28 @@
   </tr>
 </table>
 
-<%= button_to 'Empty cart', cart, :method => :delete,
-    :confirm => 'Are You Sure?', :remote => true %>
-<!-- <% end %> -->
+<div id="cart_buttons">
+<% if @order %>
+  <div class="button_cancel">
+    <%= button_to 'Cancel Order',
+                  store_url,
+                  :disabled => @order.nil? %>
+  </div>
+<% else %>
+  <div class="button_checkout">
+    <%= button_to "Checkout",
+                  new_order_path,
+                  :method => :get,
+                  :disabled => !@order.nil? %>
+  </div>
+  <div class="button_empty">
+    <%= button_to 'Empty cart',
+                  cart,
+                  :method => :delete,
+                  :confirm => 'Are You Sure?',
+                  :remote => true,
+                  :disabled => !@order.nil? %>
+  </div>
+<% end %>
+</div>
 

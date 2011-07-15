@@ -6,7 +6,11 @@
   <td><%= line_item.quantity %> &times;</td>
   <td><%= line_item.product.title%></td>
   <td class="item_price"><%= number_to_currency(line_item.total_price) %></td>
-  <td><%= button_to 'Remove', line_item, :method => :delete %></td>
-  <!--:remote => true %></td> -->
+
+  <td><%= button_to 'Remove',
+                    line_item,
+                    :method => :delete,
+                    :remote => true,
+                    :disabled => !@order.nil? %></td>
 </tr>
 

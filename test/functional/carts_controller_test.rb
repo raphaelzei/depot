@@ -55,9 +55,6 @@ class CartsControllerTest < ActionController::TestCase
     end
 
     assert_response :success
-    assert_select_rjs :replace_html, 'cart' do
-      assert_select 'tr', /Programming Ruby 1.9/
-    end
   end
 end
 

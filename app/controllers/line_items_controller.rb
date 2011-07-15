@@ -87,6 +87,7 @@ class LineItemsController < ApplicationController
       #end
       #format.html { redirect_to(store_url, :notice=> varNotice) }
       format.html { redirect_to(store_url) }
+      format.js
       format.xml  { head :ok }
     end
   end

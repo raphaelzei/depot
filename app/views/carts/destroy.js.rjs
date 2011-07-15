@@ -1,4 +1,6 @@
-page.replace_html('cart', render(@cart))
+#page.delay(5) do
+#  page.replace_html('cart', nil)
+#end
 
 page[:cart].visual_effect :blind_up
 

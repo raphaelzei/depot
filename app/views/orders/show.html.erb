@@ -16,10 +16,19 @@
 </p>
 
 <p>
-  <b>Pay type:</b>
-  <%= @order.pay_type %>
+  <b>Pay type id:</b>
+  <%= @order.pay_type_id %>
 </p>
 
+<p>
+  <b>Pay type:</b>
+  <%if @order.pay_type_id %>
+    <td><%= PayType.find([@order.pay_type_id]).map { |pt| pt.name } %></td>
+  <% else %>
+    <td></td>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
+

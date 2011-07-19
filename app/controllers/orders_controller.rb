@@ -71,7 +71,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.update_attributes(params[:order])
         Notifier.order_shipped(@order).deliver unless @order.ship_date.nil?
-        format.html { redirect_to(orders_path, :notice => 'Order was successfully updated.') }
+        format.html { redirect_to(@order, :notice => 'Order was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

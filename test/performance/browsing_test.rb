@@ -7,3 +7,4 @@ class BrowsingTest < ActionDispatch::PerformanceTest
     get '/'
   end
 end
+

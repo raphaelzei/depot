@@ -17,8 +17,8 @@
     <td><%= order.address %></td>
     <td><%= order.email %></td>
     <td><%= order.pay_type_id %></td>
-    <%if order.pay_type_id %>
-      <td><%= PayType.find([order.pay_type_id]).map { |pt| pt.name } %></td>
+    <%if order.pay_type_id? %>
+      <td><%= PayType.find_by_id(order.pay_type_id).name %></td>
     <% else %>
       <td></td>
     <% end %>

@@ -81,3 +81,4 @@ class PayTypesController < ApplicationController
     end
   end
 end
+

@@ -1,14 +1,14 @@
-1 - Corrigir Ajax dos botoes de excluir items dentro do carrinho de compras, naum estou conseguindo incluir a      identificacao dos ids dos items nos respectivos botoes de excluir
+1 - Corrigir Ajax dos botoes de excluir items dentro do carrinho de compras, naum estou conseguindo incluir os ids dos items nos respectivos botoes de exclusao.
 
-2 - Corrigir a visualizacao de LookupComboBox de tipos de pagamento na listagem e show de orders
+2 - Corrigir a visualizacao de LookupComboBox de tipos de pagamento na listagem e show de orders (erro nos testes funcionais).
 
-3 - Corrigir teste funcional
+3 - Corrigir teste funcional.
 
-4 - Corrigir teste Integracao
-
-5 - Corrigir o envio de e-mail para informar o cliente que a compra foi enviada por navio, ao renderizar os items do carrinho, traz juntamente os botoes de excluir. Porem os mesmos sao criados em outro form e o rails por seguranca possui uma trava que naum permite isso, porem eh possivel desabilita-la:
+4 - Corrigir o envio de e-mail para informar o cliente que a compra foi enviada por navio, ao renderizar os items do carrinho, traz juntamente os botoes de excluir. Porem os mesmos sao criados em outro form e o rails por seguranca possui uma trava que naum permite isso, porem eh possivel desabilita-la:
 # Disable request forgery protection in environment
-config.action_controller.allow_forgery_protection    = false
+# config.action_controller.allow_forgery_protection    = false
 
-6 - Pesquisar melhor como fazer o envio de email conforme pagina 175 do livro
+5 - Pesquisar melhor como fazer o envio de email conforme pagina 175 do livro.
+
+6 - Tirar o campo ship date quando o cliente for fazer a compra, deixar so disponivel quando o sistema for acessado pelo ADMIN
 

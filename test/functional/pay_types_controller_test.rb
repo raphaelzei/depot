@@ -47,3 +47,4 @@ class PayTypesControllerTest < ActionController::TestCase
     assert_redirected_to pay_types_path
   end
 end
+

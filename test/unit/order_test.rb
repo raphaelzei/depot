@@ -6,3 +6,4 @@ class OrderTest < ActiveSupport::TestCase
     assert true
   end
 end
+

@@ -6,3 +6,4 @@ class PayTypeTest < ActiveSupport::TestCase
     assert true
   end
 end
+

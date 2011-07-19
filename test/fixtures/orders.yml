@@ -4,11 +4,11 @@ one:
   name: Dave Thomas
   address: BRAZIL
   email: dave@example.com
-  pay_type_id: 1
+  pay_type_id: 9
 
 two:
   name: MyString
   address: MyText
   email: MyString
-  pay_type_id: 1
+  pay_type_id: 9
 

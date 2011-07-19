@@ -7,7 +7,7 @@
     <th>Email</th>
     <th>Pay type id</th>
     <th>Pay type</th>
-    <th></th>
+    <th>Ship date</th>
     <th></th>
   </tr>
 
@@ -22,6 +22,7 @@
     <% else %>
       <td></td>
     <% end %>
+    <td><%= order.ship_date %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>

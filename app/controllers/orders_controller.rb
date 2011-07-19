@@ -53,6 +53,7 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
+        Notifier.order_received(@order).deliver
         format.html { redirect_to(store_url, :notice => 'Thank you for your order.') }
         format.xml  { render :xml => @order, :status => :created, :location => @order }
       else
@@ -69,7 +70,8 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.update_attributes(params[:order])
-        format.html { redirect_to(@order, :notice => 'Order was successfully updated.') }
+        Notifier.order_shipped(@order).deliver unless @order.ship_date.nil?
+        format.html { redirect_to(orders_path, :notice => 'Order was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

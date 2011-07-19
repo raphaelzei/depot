@@ -1,0 +1,14 @@
+1 - Corrigir Ajax dos botoes de excluir items dentro do carrinho de compras, naum estou conseguindo incluir a      identificacao dos ids dos items nos respectivos botoes de excluir
+
+2 - Corrigir a visualizacao de LookupComboBox de tipos de pagamento na listagem e show de orders
+
+3 - Corrigir teste funcional
+
+4 - Corrigir teste Integracao
+
+5 - Corrigir o envio de e-mail para informar o cliente que a compra foi enviada por navio, ao renderizar os items do carrinho, traz juntamente os botoes de excluir. Porem os mesmos sao criados em outro form e o rails por seguranca possui uma trava que naum permite isso, porem eh possivel desabilita-la:
+# Disable request forgery protection in environment
+config.action_controller.allow_forgery_protection    = false
+
+6 - Pesquisar melhor como fazer o envio de email conforme pagina 175 do livro
+

@@ -3,12 +3,12 @@
 one:
   name: Dave Thomas
   address: BRAZIL
-  email: dave@example.org
-  pay_type: Check
+  email: dave@example.com
+  pay_type_id: 1
 
 two:
   name: MyString
   address: MyText
   email: MyString
-  pay_type: MyString
+  pay_type_id: 1
 

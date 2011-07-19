@@ -24,10 +24,14 @@
     <%= f.text_field :email, :size => 40 %>
   </div>
   <div class="field">
-    <%= f.label :pay_type %><br />
+    <%= f.label :pay_type_id %><br />
     <%= f.select :pay_type_id,
                  PayType.find(:all).map { |pt| [pt.name, pt.id] },
                  :prompt => 'Select a payment method' %>
+  </div>
+  <div class="field">
+    <%= f.label :ship_date %><br />
+    <%= f.datetime_select :ship_date %>
   </div>
   <div class="actions">
     <%= f.submit 'Place Order' %>

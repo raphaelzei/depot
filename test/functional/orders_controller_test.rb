@@ -45,7 +45,7 @@ class OrdersControllerTest < ActionController::TestCase
   end
 
   test "should update order" do
-    put :update, :id => @order.to_param, :order => @order.attributes
+    put :update, :id => @order.to_param, :order => @update
     assert_redirected_to order_path(assigns(:order))
   end
 

@@ -3,12 +3,14 @@ require 'test_helper'
 class OrdersControllerTest < ActionController::TestCase
   setup do
     @order = orders(:one)
+    #@pay_type = pay_types(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
     assert_not_nil assigns(:orders)
+    #assert_not_nil assigns(:pay_types)
   end
 
   test "requires item in cart" do
@@ -35,7 +37,7 @@ class OrdersControllerTest < ActionController::TestCase
   end
 
   test "should show order" do
-    get :show, :id => @order.to_param
+    get :show, :id => @order.to_param #, :name => @pay_type.to_param
     assert_response :success
   end
 

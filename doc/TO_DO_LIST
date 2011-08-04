@@ -1,6 +1,6 @@
 1 - Corrigir Ajax dos botoes de excluir items dentro do carrinho de compras, naum estou conseguindo incluir os ids dos items nos respectivos botoes de exclusao.
 
-#2 - Corrigir a visualizacao de LookupComboBox de tipos de pagamento na listagem e show de orders - OK
+2 - Corrigir a visualizacao de LookupComboBox de tipos de pagamento na listagem e show de orders - OK
 
 3 - Corrigir teste funcional.
  ->NotifierTest
@@ -12,5 +12,9 @@
 
 5 - Pesquisar melhor como fazer o envio de email conforme pagina 175 do livro.
 
-6 - Tirar o campo ship date quando o cliente for fazer a compra, deixar so disponivel quando o sistema for acessado pelo ADMIN
+6 - Arrumar login, onde para acessar o carrinhos de compra o cliente deve estar logado no sistema
+
+7 - Tirar o campo ship date quando o cliente for fazer a compra, deixar so disponivel quando o sistema for acessado pelo ADMIN
+
+8 - Arrumar paginacao para voltar na pagina certa do registro selecionado para visualizacao, pois hoje a paginacao sem voltar para a primeira pagina
 

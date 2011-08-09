@@ -1,0 +1,78 @@
+pt:
+#START:Layout
+  layouts:
+    application:
+      title:       "Publicações de Pragmatic"
+      home:        "Inicio"
+      questions:   "Perguntas"
+      news:        "Notícias"
+      contact:     "Contato"
+#END:Layout
+#START:Main
+  store:
+    index:
+      title_html:  "Seu Cat&aacute;logo de Pragmatic"
+      add_html:    "Adicionar ao Carrinho"
+#END:Main
+#START:Cart
+  carts:
+    cart:
+      title:    "Carrinho de compra"
+      empty:    "Limpar carrinho"
+      checkout: "Comprar"
+      cancel:   "Cancelar compra"
+#END:Cart
+#START:LineItem
+  line_items:
+    line_item:
+      remove: "Remover"
+#END:LineItem
+#START:Currency
+  number:
+    currency:
+      format:
+        unit:      "R$"
+        precision: 2
+        separator: ","
+        delimiter: "."
+        format:    "%u&nbsp;%n"
+#END:Currency
+#START:Order
+  orders:
+    new:
+      legend:          "Por favor, Digite seus dados"
+    form:
+      name:            "Nome"
+      address_html:    "Endere&ccedil;o"
+      email:           "E-mail"
+      pay_type:        "Pagar com"
+      pay_prompt_html: "Selecione uma forma de pagamento"
+      ship_date_html:  "Data de envío"
+      submit:          "Finalizar Pedido"
+#END:Order
+#START:ActiveRecord
+  activerecord:
+    models:
+      order:        "Pedido"
+    attributes:
+      order:
+        name:         "Nome"
+        address_html: "Endere&ccedil;o"
+        email:        "E-mail"
+        pay_type_id:  "Forma de pagamento"
+    errors:
+      messages:
+        inclusion: "n&atilde;o est&aacute; incluido na lista"
+        blank:     "n&atilde;o pode deixar em branco"
+#END:ActiveRecord
+#START:Error
+  errors:
+    template:
+      header:
+        one:   "1 erro esta impedindo que este %{model} se confirme"
+        other: "%{count} erros estao impedindo que este %{model} se confirme"
+#END:Error
+#START:Thanks
+  thanks: "Muito obrigado pelo seu pedido"
+#END:Thanks
+

@@ -18,3 +18,7 @@
 
 8 - Arrumar paginacao para voltar na pagina certa do registro selecionado para visualizacao, pois hoje a paginacao sem voltar para a primeira pagina
 
+9 - Fazer a traducao em portugues do Site
+
+10 - Problema na traducao para <!-- <%= f.datetime_select :ship_date %> --> no FORM de Order
+

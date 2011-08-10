@@ -20,6 +20,14 @@
   <%= @product.price %>
 </p>
 
+<div id="button_back">
+<%= button_to 'Back',
+              products_path,
+              :method => :get %>
+</div>
+<div id="button_edit">
+<%= button_to 'Edit',
+              edit_product_path(@product),
+              :method => :get %>
+</div>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>

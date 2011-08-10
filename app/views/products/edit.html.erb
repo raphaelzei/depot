@@ -2,5 +2,14 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<div id="button_back">
+<%= button_to 'Back',
+              products_path,
+              :method => :get %>
+</div>
+<div id="button_show">
+<%= button_to 'Show',
+              @product,
+              :method => :get %>
+</div>
+

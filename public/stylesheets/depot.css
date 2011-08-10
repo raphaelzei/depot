@@ -66,41 +66,41 @@
 /* Styles for products/index */
 
 #product_list table {
-        border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 #product_list table tr td {
-        padding: 5px;
-        vertical-align: top;
+  padding: 5px;
+  vertical-align: top;
 }
 
 #product_list .list_image {
-  width:        60px;
-  height:       70px;
+  width: 60px;
+  height: 70px;
 }
 
 #product_list .list_description {
-  width:        60%;
+  width: 60%;
 }
 
 #product_list .list_description dl {
-        margin: 0;
+   margin: 0;
 }
 
 #product_list .list_description dt {
-	color:        #244;
-	font-weight:  bold;
-	font-size:    larger;
+  color:        #244;
+  font-weight:  bold;
+  font-size:    larger;
 }
 
 #product_list .list_description dd {
-        margin: 0;
+   margin: 0;
 }
 
 #product_list .list_actions {
-  font-size:    x-small;
+  /*font-size:    x-small;*/
   text-align:   right;
-  padding-left: 1em;
+  padding-left: 5em;
 }
 
 #product_list .list_line_even {
@@ -245,5 +245,31 @@
 .locale {
   float: right;
   margin: -0.25em 0.1em;
+}
+
+/* Styles for Grid */
+#grid .line_title {
+  background:   silver;
+}
+
+#grid .line_even {
+  background:   #e0f8f8;
+}
+
+#grid .line_odd {
+  background:   #f8b0f8;
+}
+
+/* Styles for Actions Buttons */
+#button_back {
+  float: right;
+}
+
+#button_show {
+  float: right;
+}
+
+#button_edit {
+  float: right;
 }
 

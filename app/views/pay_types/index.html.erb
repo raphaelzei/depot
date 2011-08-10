@@ -1,23 +1,33 @@
+<div id="grid">
 <h1>Listing pay_types</h1>
 
 <table>
-  <tr>
+  <tr class="line_title">
     <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th colspan="3">Actions</th>
   </tr>
 
 <% @pay_types.each do |pay_type| %>
-  <tr>
+  <tr class="<%= cycle('line_old', 'line_even') %>">
     <td><%= pay_type.name %></td>
-    <td><%= link_to 'Show', pay_type %></td>
-    <td><%= link_to 'Edit', edit_pay_type_path(pay_type) %></td>
-    <td><%= link_to 'Destroy', pay_type, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= button_to 'Show',
+                      pay_type,
+                      :method => :get %></td>
+    <td><%= button_to 'Edit',
+                      edit_pay_type_path(pay_type),
+                      :method => :get %></td>
+    <td><%= button_to 'Destroy',
+                      pay_type,
+                      :confirm => 'Are you sure?',
+                      :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
+<p><%= will_paginate @pay_types %></p>
 
-<%= link_to 'New Pay type', new_pay_type_path %>
+<%= button_to 'New Pay type',
+              new_pay_type_path,
+              :method => :get %>
+

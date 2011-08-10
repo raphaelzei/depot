@@ -15,6 +15,14 @@
   <%= @user.salt %>
 </p>
 
+<div id="button_back">
+<%= button_to 'Back',
+              users_path,
+              :method => :get %>
+</div>
+<div id="button_edit">
+<%= button_to 'Edit',
+              edit_user_path(@user),
+              :method => :get %>
+</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

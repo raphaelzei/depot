@@ -2,7 +2,7 @@ class PayTypesController < ApplicationController
   # GET /pay_types
   # GET /pay_types.xml
   def index
-    @pay_types = PayType.all
+    @pay_types = PayType.paginate :page => params[:page], :order => 'created_at desc', :per_page => 10
 
     respond_to do |format|
       format.html # index.html.erb

@@ -2,5 +2,14 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @pay_type %> |
-<%= link_to 'Back', pay_types_path %>
+<div id="button_back">
+<%= button_to 'Back',
+              pay_types_path,
+              :method => :get %>
+</div>
+<div id="button_show">
+<%= button_to 'Show',
+              @pay_type,
+              :method => :get %>
+</div>
+

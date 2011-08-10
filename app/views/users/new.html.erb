@@ -2,4 +2,9 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Back', users_path %>
+<div id="button_back">
+<%= button_to 'Back',
+              users_path,
+              :method => :get %>
+</div>
+

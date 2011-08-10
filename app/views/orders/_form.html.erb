@@ -28,10 +28,12 @@
                  PayType.find(:all).map { |pt| [pt.name, pt.id] },
                  :prompt => t('.pay_prompt_html') %>
   </div>
-  <div class="field">
-    <%= f.label t('.ship_date_html') %><br />
-    <%= f.text_field :ship_date %>
-  </div>
+  <% if session[:user_id] %>
+    <div class="field">
+      <%= f.label t('.ship_date_html') %><br />
+      <%= f.text_field :ship_date %>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit t('.submit') %>
   </div>

@@ -5,6 +5,14 @@
   <%= @pay_type.name %>
 </p>
 
+<div id="button_back">
+<%= button_to 'Back',
+              pay_types_path,
+              :method => :get %>
+</div>
+<div id="button_edit">
+<%= button_to 'Edit',
+              edit_pay_type_path(@pay_type),
+              :method => :get %>
+</div>
 
-<%= link_to 'Edit', edit_pay_type_path(@pay_type) %> |
-<%= link_to 'Back', pay_types_path %>

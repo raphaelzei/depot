@@ -25,6 +25,19 @@
   <%= @order.pay_type.name %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<p>
+  <b>Shipped:</b>
+  <%= @order.ship_date %>
+</p>
+
+<div id="button_back">
+<%= button_to 'Back',
+              orders_path,
+              :method => :get %>
+</div>
+<div id="button_edit">
+<%= button_to 'Edit',
+              edit_order_path(@order),
+              :method => :get %>
+</div>
 
